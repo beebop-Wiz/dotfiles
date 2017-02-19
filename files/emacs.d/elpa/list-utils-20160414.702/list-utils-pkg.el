@@ -1,1 +1,1 @@
-(define-package "list-utils" "20160414.702" "List-manipulation utility functions" 'nil :url "http://github.com/rolandwalker/list-utils" :keywords '("extensions"))
+/home/beebop/dotfiles/files/emacs.d/elpa/list-utils-20160414.702/list-utils-pkg.el

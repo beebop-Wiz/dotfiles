@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for file in .config/polybar/config .Xresources; do
+    rm ~/$file
+    ln -s ~/$file.light ~/$file
+done
+
+sh modeswitch.sh

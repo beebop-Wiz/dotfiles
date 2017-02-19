@@ -1,1 +1,1 @@
-(define-package "pcache" "20160724.1929" "persistent caching for Emacs." '((eieio "1.3")))
+/home/beebop/dotfiles/files/emacs.d/elpa/pcache-20160724.1929/pcache-pkg.el

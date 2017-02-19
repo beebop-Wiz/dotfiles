@@ -1,22 +1,1 @@
-;;; nasm-mode-autoloads.el --- automatically extracted autoloads
-;;
-;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
-
-;;;### (autoloads nil "nasm-mode" "nasm-mode.el" (22464 31387 768940
-;;;;;;  743000))
-;;; Generated autoloads from nasm-mode.el
-
-(autoload 'nasm-mode "nasm-mode" "\
-Major mode for editing NASM assembly programs.
-
-\(fn)" t nil)
-
-;;;***
-
-;; Local Variables:
-;; version-control: never
-;; no-byte-compile: t
-;; no-update-autoloads: t
-;; End:
-;;; nasm-mode-autoloads.el ends here
+/home/beebop/dotfiles/files/emacs.d/elpa/nasm-mode-20160525.1826/nasm-mode-autoloads.el

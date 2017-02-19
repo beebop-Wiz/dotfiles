@@ -1,1 +1,1 @@
-(define-package "font-utils" "20150806.1051" "Utility functions for working with fonts" '((persistent-soft "0.8.8") (pcache "0.2.3")) :url "http://github.com/rolandwalker/font-utils" :keywords '("extensions"))
+/home/beebop/dotfiles/files/emacs.d/elpa/font-utils-20150806.1051/font-utils-pkg.el

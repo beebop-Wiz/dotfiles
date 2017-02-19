@@ -3,76 +3,28 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(c-default-style
-   (quote
-    ((java-mode . "bsd")
-     (awk-mode . "awk")
-     (other . "gnu"))))
- '(inhibit-startup-screen t)
- '(initial-scratch-message ";; parentheses are the enemy.
-"))
+ '(inhibit-startup-screen t))
 
-;(add-to-list 'load-path "~/.emacs.d/lisp")
-;(load "spice-mode")
-
-(require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/") t)
-(when (< emacs-major-version 24)
-  ;; For important compatibility libraries like cl-lib
-  (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
-(package-initialize)
-(defface default
-  '(((type tty) (:background "black" :foreground "white"))
-    ((type graphic) (:background "white" :foreground "black"))
-    (t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width semi-condensed :foundry "misc" :family "fixed")))
-  "Default face."
-  :group 'basic-faces
-  )
-
-(set-default-font "-unknown-Monoid-normal-normal-semicondensed-*-*-*-*-*-m-0-iso10646-1")
-(set-fontset-font t '(#Xe100 . #Xe16f) "-unknown-Monoid-normal-normal-semicondensed-*-*-*-*-*-m-0-iso10646-1")
-
-(defconst monoid-font-lock-keywords-alist
-  (mapcar (lambda (regex-char-pair)
-	    `(,(car regex-char-pair)
-	      (0 (prog1 ()
-		   (compose-region (match-beginning 1)
-				   (match-end 1)
-				   ,(concat "	" (list (decode-char 'ucs (cadr regex-char-pair)))))))))
-	  '(("[^-]\\(->\\)" #X2192)
-	    ("\\(<-\\)[^-]" #X2190)
-	    ("\\(mm\\)" #Xe100)
-	    ("\\(<<-\\)" #Xe101)
-	    ("\\(->>\\)" #Xe102)
-	    ("\\(<--\\)" #Xe103)
-	    ("\\(-->\\)" #Xe104)
-	    ("\\(!=\\)[^=]" #Xe105)
-	    ("\\(<=\\)[^=]" #Xe106)
-	    ("[^=]\\(>=\\)" #Xe107)
-;	    ("\\(\\.\\.\\.\\)" #Xe10c)
-	    ("[^=<>]\\(==\\)[^=<>]" #Xe111)
-	    ("[^=]\\(===\\)[^=]" #Xe112)
-	    ("\\(<!--\\)" #Xe113)
-	    ("\\(!==\\)" #Xe116)
-	    ("[0-9]\\(*\\)[0-9]" #Xe117) ; numeric constants
-	    ("0\\(x\\)[0-9a-f]" #Xe117) ; hex constants
-	    ("\\(//\\)" #Xe128)
-	    ("[^=]\\(=:=\\)[^=]" #Xe129)
-	    ("[^=]\\(=>\\)" #Xe12a)
-	    ("\\(<==\\)" #Xe12f)
-	    ("\\(==>\\)" #Xe130)
-	    )))
-
-;; (defun add-monoid-symbol-keywords ()
-;;   (interactive)
-;;   (font-lock-add-keywords nil monoid-font-lock-keywords-alist))
-
-;; (add-hook 'prog-mode-hook
-;; 	  #'add-monoid-symbol-keywords)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "white" :foreground "black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width semi-condensed :foundry "unknown" :family "Monoid")))))
+ '(error ((t (:foreground "#dc322f" :weight bold))))
+ '(escape-glyph ((t (:foreground "#d33682"))))
+ '(font-lock-builtin-face ((t (:foreground "#6c71c4"))))
+ '(font-lock-comment-face ((t (:foreground "#dc322f"))))
+ '(font-lock-constant-face ((t (:foreground "#2aa198"))))
+ '(font-lock-function-name-face ((t (:foreground "#268bd2"))))
+ '(font-lock-keyword-face ((t (:foreground "#d33682"))))
+ '(font-lock-negation-char-face ((t (:foreground "#dc322f"))))
+ '(font-lock-string-face ((t (:background "#eee8d5" :foreground "#586e75"))))
+ '(font-lock-type-face ((t (:foreground "#859900"))))
+ '(font-lock-variable-name-face ((t (:foreground "#b58900"))))
+ '(minibuffer-prompt ((t (:foreground "#268bd2"))))
+ '(mode-line ((t (:background "#eee8d5" :foreground "#586e75" :box (:line-width -1 :style released-button)))))
+ '(mode-line-inactive ((t (:inherit mode-line :background "#93a1a1" :foreground "#073642" :box (:line-width -1 :color "grey75") :weight light))))
+ '(region ((t (:background "#eee8d5" :distant-foreground "#657b83")))))
+
+(menu-bar-mode -1)
+(tool-bar-mode -1)
