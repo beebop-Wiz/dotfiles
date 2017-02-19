@@ -1,8 +1,0 @@
-#!/bin/bash
-
-for file in .config/polybar/config; do
-    rm ~/$file
-    ln -s ~/$file.light ~/$file
-done
-
-sh modeswitch.sh
